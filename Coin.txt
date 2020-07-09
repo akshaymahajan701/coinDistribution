@@ -1,0 +1,26 @@
+
+public class Demo{
+	public static void coin_distribution(int n) {
+		int five=0,two=0,one=0;
+		int total=0;
+		
+		five=(int)(n-4)/5;
+		n=n-five*5;
+		
+		if(n%2==0) {
+			two=(int)(n-2)/2;
+			n=n-two*2;
+		}
+		else {
+			two=(int)(n-1)/2;
+			n=n-two*2;
+		}
+		
+		one=n;
+		total=one+two+five;
+		System.out.println(total+"  "+five+"  "+two+"  "+one);
+	}
+	public static void main(String[] args) {
+		coin_distribution(9);
+	}
+}
